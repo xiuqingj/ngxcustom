@@ -1,5 +1,5 @@
 #   include nginxcustom::customheader
-class nginxcustom::customheader {
+class ngxcustom::customheader {
   pe_nginx::directive { 'include custom headers':
     directive_ensure => 'present',
     target           => '/etc/puppetlabs/nginx/conf.d/proxy.conf',
@@ -13,6 +13,6 @@ class nginxcustom::customheader {
     group  => 'root',
     owner  => 'root',
     mode   => '0644',
-    source =>'puppet:///modules/nginxcustom/headers.conf',
+    source =>'puppet:///modules/ngxcustom/headers.conf',
     }
 }
